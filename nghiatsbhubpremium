@@ -4,13 +4,15 @@
 
 local SCRIPT_TO_LOAD = "https://raw.githubusercontent.com/huunghia7h1304-rgb/nghiatsbhubnokeypremium/refs/heads/main/NGHIADEPZAIVCL7HHUB"
 
--- 🔑 DANH SÁCH KEY (key bạn bán)
+-- 🔑 DANH SÁCH KEY 
 local validKeys = {
     "nghiadepzai123",
     "nghiaVIP2026",
     "prohubnghia",
     "nghia123456",
-    "depzaihubv1"
+    "depzaihubv1",
+    "nghiadepzaivcl",
+    "nghiaxtsb"
 }
 
 -- check key
