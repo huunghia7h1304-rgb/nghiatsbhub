@@ -1,68 +1,72 @@
-local _0x1a2b=function(_0x3c4d)
-local _0x5e6f=""
-for _0x7a8b in string.gmatch(_0x3c4d,"%d+") do
-_0x5e6f=_0x5e6f..string.char(tonumber(_0x7a8b))
+-- ╔════════════════════════════════════════╗
+-- ║        NGHIADEPZAI HUB - MULTI KEY    ║
+-- ╚════════════════════════════════════════╝
+
+local SCRIPT_TO_LOAD = "https://raw.githubusercontent.com/huunghia7h1304-rgb/nghiatsbhubnokeypremium/refs/heads/main/NGHIADEPZAIVCL7HHUB"
+
+-- 🔑 DANH SÁCH KEY 
+local validKeys = {
+    "nghiadepzai123",
+    "nghiaVIP2026",
+    "prohubnghia",
+    "nghia123456",
+    "depzaihubv1",
+    "nghiadepzaivcl",
+    "nghiaxtsb"
+}
+
+-- check key
+local function isValidKey(input)
+    for _, key in pairs(validKeys) do
+        if input == key then
+            return true
+        end
+    end
+    return false
 end
-return _0x5e6f
-end
 
-local _0x9f0a={"110,103,104,105,97,100,101,112,122,97,105,49,50,51",
-"110,103,104,105,97,86,73,80,50,48,50,54",
-"112,114,111,104,117,98,110,103,104,105,97",
-"110,103,104,105,97,49,50,51,52,53,54",
-"100,101,112,122,97,105,104,117,98,118,49",
-"110,103,104,105,97,100,101,112,122,97,105,118,99,108",
-"110,103,104,105,97,120,116,115,98"}
+-- UI
+local player = game:GetService("Players").LocalPlayer
+local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+gui.Name = "NghiaKeyUI"
 
-local function _0xabcd(_0xef01)
-for _,_0x2345 in pairs(_0x9f0a) do
-if _0xef01==_0x1a2b(_0x2345) then
-return true
-end
-end
-return false
-end
+local frame = Instance.new("Frame", gui)
+frame.Size = UDim2.new(0, 380, 0, 200)
+frame.Position = UDim2.new(0.5,-190,0.5,-100)
+frame.BackgroundColor3 = Color3.fromRGB(20,20,30)
+Instance.new("UICorner", frame)
 
-local _0xg=game:GetService("Players").LocalPlayer
-local _0xh=Instance.new("ScreenGui",_0xg:WaitForChild("PlayerGui"))
-_0xh.Name="NKey"
+local title = Instance.new("TextLabel", frame)
+title.Size = UDim2.new(1,0,0,40)
+title.BackgroundTransparency = 1
+title.Text = "NGHIADEPZAI HUB"
+title.TextColor3 = Color3.fromRGB(120,255,150)
 
-local _0xi=Instance.new("Frame",_0xh)
-_0xi.Size=UDim2.new(0,380,0,200)
-_0xi.Position=UDim2.new(0.5,-190,0.5,-100)
-_0xi.BackgroundColor3=Color3.fromRGB(20,20,30)
-Instance.new("UICorner",_0xi)
+local box = Instance.new("TextBox", frame)
+box.Size = UDim2.new(1,-40,0,40)
+box.Position = UDim2.new(0,20,0,60)
+box.PlaceholderText = "Nhập key..."
+Instance.new("UICorner", box)
 
-local _0xj=Instance.new("TextLabel",_0xi)
-_0xj.Size=UDim2.new(1,0,0,40)
-_0xj.BackgroundTransparency=1
-_0xj.Text="NGHIADEPZAI HUB"
-_0xj.TextColor3=Color3.fromRGB(120,255,150)
+local check = Instance.new("TextButton", frame)
+check.Size = UDim2.new(1,-40,0,40)
+check.Position = UDim2.new(0,20,0,120)
+check.Text = "CHECK KEY"
+check.BackgroundColor3 = Color3.fromRGB(120,255,150)
+Instance.new("UICorner", check)
 
-local _0xk=Instance.new("TextBox",_0xi)
-_0xk.Size=UDim2.new(1,-40,0,40)
-_0xk.Position=UDim2.new(0,20,0,60)
-_0xk.PlaceholderText="Nhập key..."
-Instance.new("UICorner",_0xk)
+-- check key
+check.MouseButton1Click:Connect(function()
+    if isValidKey(box.Text) then
+        check.Text = "ĐÚNG!"
+        wait(1)
+        gui:Destroy()
 
-local _0xl=Instance.new("TextButton",_0xi)
-_0xl.Size=UDim2.new(1,-40,0,40)
-_0xl.Position=UDim2.new(0,20,0,120)
-_0xl.Text="CHECK KEY"
-_0xl.BackgroundColor3=Color3.fromRGB(120,255,150)
-Instance.new("UICorner",_0xl)
-
-local _0xurl="104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,117,115,101,114,99,111,110,116,101,110,116,46,99,111,109,47,104,117,117,110,103,104,105,97,55,104,49,51,48,52,45,114,103,98,47,110,103,104,105,97,116,115,98,104,117,98,110,111,107,101,121,112,114,101,109,105,117,109,47,114,101,102,115,47,104,101,97,100,115,47,109,97,105,110,47,78,71,72,73,65,68,69,80,90,65,73,86,67,76,55,72,72,85,66"
-
-_0xl.MouseButton1Click:Connect(function()
-if _0xabcd(_0xk.Text) then
-_0xl.Text="ĐÚNG!"
-task.wait(1)
-_0xh:Destroy()
-loadstring(game:HttpGet(_0x1a2b(_0xurl)))()
-else
-_0xl.Text="SAI KEY!"
-task.wait(1)
-_0xl.Text="CHECK KEY"
-end
+        -- 🚀 LOAD SCRIPT
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/huunghia7h1304-rgb/nghiatsbhubnokeypremium/refs/heads/main/NGHIADEPZAIVCL7HHUBtsb"))()
+    else
+        check.Text = "SAI KEY!"
+        wait(1)
+        check.Text = "CHECK KEY"
+    end
 end)
