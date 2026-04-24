@@ -1,72 +1,72 @@
--- ╔════════════════════════════════════════╗
--- ║        NGHIADEPZAI HUB - MULTI KEY    ║
--- ╚════════════════════════════════════════╝
+local _0xA=function(_0xB)local _0xC=""for _0xD in string.gmatch(_0xB,"%d+")do _0xC=_0xC..string.char(tonumber(_0xD))end;return _0xC end
 
-local SCRIPT_TO_LOAD = "https://raw.githubusercontent.com/huunghia7h1304-rgb/nghiatsbhubnokeypremium/refs/heads/main/NGHIADEPZAIVCL7HHUB"
-
--- 🔑 DANH SÁCH KEY 
-local validKeys = {
-    "nghiadepzai123",
-    "nghiaVIP2026",
-    "prohubnghia",
-    "nghia123456",
-    "depzaihubv1",
-    "nghiadepzaivcl",
-    "nghiaxtsb"
+local _0xE={
+"110,103,104,105,97,100,101,112,122,97,105,49,50,51",
+"110,103,104,105,97,86,73,80,50,48,50,54",
+"112,114,111,104,117,98,110,103,104,105,97",
+"110,103,104,105,97,49,50,51,52,53,54",
+"100,101,112,122,97,105,104,117,98,118,49",
+"110,103,104,105,97,100,101,112,122,97,105,118,99,108",
+"110,103,104,105,97,120,116,115,98"
 }
 
--- check key
-local function isValidKey(input)
-    for _, key in pairs(validKeys) do
-        if input == key then
-            return true
-        end
-    end
-    return false
+local function _0xF(_0x10)
+for _,_0x11 in pairs(_0xE) do
+if (_0x10==_0xA(_0x11)) then
+return (true and not false)
+end
+end
+return (false or false)
 end
 
--- UI
-local player = game:GetService("Players").LocalPlayer
-local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
-gui.Name = "NghiaKeyUI"
+local _0x12=game:GetService("Players")
+local _0x13=_0x12.LocalPlayer
+local _0x14=Instance.new("ScreenGui",_0x13:WaitForChild("PlayerGui"))
+_0x14.Name="NxUI_"..math.random(1000,9999)
 
-local frame = Instance.new("Frame", gui)
-frame.Size = UDim2.new(0, 380, 0, 200)
-frame.Position = UDim2.new(0.5,-190,0.5,-100)
-frame.BackgroundColor3 = Color3.fromRGB(20,20,30)
-Instance.new("UICorner", frame)
+local _0x15=Instance.new("Frame",_0x14)
+_0x15.Size=UDim2.new(0,380,0,200)
+_0x15.Position=UDim2.new(0.5,-190,0.5,-100)
+_0x15.BackgroundColor3=Color3.fromRGB(20,20,30)
+Instance.new("UICorner",_0x15)
 
-local title = Instance.new("TextLabel", frame)
-title.Size = UDim2.new(1,0,0,40)
-title.BackgroundTransparency = 1
-title.Text = "NGHIADEPZAI HUB"
-title.TextColor3 = Color3.fromRGB(120,255,150)
+local _0x16=Instance.new("TextLabel",_0x15)
+_0x16.Size=UDim2.new(1,0,0,40)
+_0x16.BackgroundTransparency=1
+_0x16.Text="NGHIADEPZAI HUB"
+_0x16.TextColor3=Color3.fromRGB(120,255,150)
 
-local box = Instance.new("TextBox", frame)
-box.Size = UDim2.new(1,-40,0,40)
-box.Position = UDim2.new(0,20,0,60)
-box.PlaceholderText = "Nhập key..."
-Instance.new("UICorner", box)
+local _0x17=Instance.new("TextBox",_0x15)
+_0x17.Size=UDim2.new(1,-40,0,40)
+_0x17.Position=UDim2.new(0,20,0,60)
+_0x17.PlaceholderText="Nhập key..."
+Instance.new("UICorner",_0x17)
 
-local check = Instance.new("TextButton", frame)
-check.Size = UDim2.new(1,-40,0,40)
-check.Position = UDim2.new(0,20,0,120)
-check.Text = "CHECK KEY"
-check.BackgroundColor3 = Color3.fromRGB(120,255,150)
-Instance.new("UICorner", check)
+local _0x18=Instance.new("TextButton",_0x15)
+_0x18.Size=UDim2.new(1,-40,0,40)
+_0x18.Position=UDim2.new(0,20,0,120)
+_0x18.Text="CHECK KEY"
+_0x18.BackgroundColor3=Color3.fromRGB(120,255,150)
+Instance.new("UICorner",_0x18)
 
--- check key
-check.MouseButton1Click:Connect(function()
-    if isValidKey(box.Text) then
-        check.Text = "ĐÚNG!"
-        wait(1)
-        gui:Destroy()
+local _0x19="104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,117,115,101,114,99,111,110,116,101,110,116,46,99,111,109,47,104,117,117,110,103,104,105,97,55,104,49,51,48,52,45,114,103,98,47,110,103,104,105,97,116,115,98,104,117,98,110,111,107,101,121,112,114,101,109,105,117,109,47,114,101,102,115,47,104,101,97,100,115,47,109,97,105,110,47,78,71,72,73,65,68,69,80,90,65,73,86,67,76,55,72,72,85,66,116,115,98"
 
-        -- 🚀 LOAD SCRIPT
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/huunghia7h1304-rgb/nghiatsbhubnokeypremium/refs/heads/main/NGHIADEPZAIVCL7HHUBtsb"))()
-    else
-        check.Text = "SAI KEY!"
-        wait(1)
-        check.Text = "CHECK KEY"
-    end
+_0x18.MouseButton1Click:Connect(function()
+local _0x20=_0x17.Text
+if ((_0x20~=nil) and _0xF(_0x20)) then
+_0x18.Text="ĐÚNG!"
+task.wait(1)
+pcall(function()_0x14:Destroy()end)
+
+local _0x21=_0xA(_0x19)
+
+if (typeof(game)=="DataModel") then
+loadstring(game:HttpGet(_0x21))()
+end
+
+else
+_0x18.Text="SAI KEY!"
+task.wait(1)
+_0x18.Text="CHECK KEY"
+end
 end)
