@@ -1,0 +1,71 @@
+-- UI KEY
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+gui.Name = "NghiaHubKey"
+
+local frame = Instance.new("Frame", gui)
+frame.Size = UDim2.new(0, 380, 0, 240)
+frame.Position = UDim2.new(0.5, -190, 0.5, -120)
+frame.BackgroundColor3 = Color3.fromRGB(20,20,30)
+Instance.new("UICorner", frame)
+
+local title = Instance.new("TextLabel", frame)
+title.Size = UDim2.new(1,0,0,40)
+title.BackgroundTransparency = 1
+title.Text = "NGHIADEPZAI HUB"
+title.TextColor3 = Color3.fromRGB(120,255,150)
+
+-- Ô nhập key
+local box = Instance.new("TextBox", frame)
+box.Size = UDim2.new(1,-40,0,40)
+box.Position = UDim2.new(0,20,0,60)
+box.PlaceholderText = "Nhập key..."
+box.Text = ""
+Instance.new("UICorner", box)
+
+-- Nút CHECK KEY
+local btn = Instance.new("TextButton", frame)
+btn.Size = UDim2.new(1,-40,0,40)
+btn.Position = UDim2.new(0,20,0,110)
+btn.Text = "CHECK KEY"
+btn.BackgroundColor3 = Color3.fromRGB(120,255,150)
+Instance.new("UICorner", btn)
+
+-- 🔥 NÚT GET KEY
+local getKeyBtn = Instance.new("TextButton", frame)
+getKeyBtn.Size = UDim2.new(1,-40,0,30)
+getKeyBtn.Position = UDim2.new(0,20,0,160)
+getKeyBtn.Text = "GET KEY"
+getKeyBtn.BackgroundColor3 = Color3.fromRGB(80,170,255)
+getKeyBtn.TextColor3 = Color3.fromRGB(255,255,255)
+Instance.new("UICorner", getKeyBtn)
+
+-- LINK KEY
+local link = "https://getkeynghia.lovable.app"
+
+getKeyBtn.MouseButton1Click:Connect(function()
+    setclipboard = setclipboard or function() end
+    setclipboard(link)
+
+    getKeyBtn.Text = "ĐÃ COPY LINK!"
+    wait(1.5)
+    getKeyBtn.Text = "GET KEY"
+end)
+
+-- CHECK KEY
+btn.MouseButton1Click:Connect(function()
+    if box.Text == serverKey then
+        btn.Text = "ĐÚNG!"
+        wait(1)
+        gui:Destroy()
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/huunghia7h1304-rgb/nghiatsbhubnokeypremium/refs/heads/main/NGHIADEPZAIVCL7HHUB"))()
+
+    else
+        btn.Text = "SAI KEY!"
+        wait(1)
+        btn.Text = "CHECK KEY"
+    end
+end)
