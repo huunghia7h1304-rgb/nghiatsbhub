@@ -1,0 +1,70 @@
+-- ╔════════════════════════════════════════╗
+-- ║        NGHIADEPZAI HUB - MULTI KEY    ║
+-- ╚════════════════════════════════════════╝
+
+local SCRIPT_TO_LOAD = "https://raw.githubusercontent.com/huunghia7h1304-rgb/nghiatsbhubnokeypremium/refs/heads/main/NGHIADEPZAIVCL7HHUB"
+
+-- 🔑 DANH SÁCH KEY (key bạn bán)
+local validKeys = {
+    "nghiadepzai123",
+    "nghiaVIP2026",
+    "prohubnghia",
+    "nghia123456",
+    "depzaihubv1"
+}
+
+-- check key
+local function isValidKey(input)
+    for _, key in pairs(validKeys) do
+        if input == key then
+            return true
+        end
+    end
+    return false
+end
+
+-- UI
+local player = game:GetService("Players").LocalPlayer
+local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+gui.Name = "NghiaKeyUI"
+
+local frame = Instance.new("Frame", gui)
+frame.Size = UDim2.new(0, 380, 0, 200)
+frame.Position = UDim2.new(0.5,-190,0.5,-100)
+frame.BackgroundColor3 = Color3.fromRGB(20,20,30)
+Instance.new("UICorner", frame)
+
+local title = Instance.new("TextLabel", frame)
+title.Size = UDim2.new(1,0,0,40)
+title.BackgroundTransparency = 1
+title.Text = "NGHIADEPZAI HUB"
+title.TextColor3 = Color3.fromRGB(120,255,150)
+
+local box = Instance.new("TextBox", frame)
+box.Size = UDim2.new(1,-40,0,40)
+box.Position = UDim2.new(0,20,0,60)
+box.PlaceholderText = "Nhập key..."
+Instance.new("UICorner", box)
+
+local check = Instance.new("TextButton", frame)
+check.Size = UDim2.new(1,-40,0,40)
+check.Position = UDim2.new(0,20,0,120)
+check.Text = "CHECK KEY"
+check.BackgroundColor3 = Color3.fromRGB(120,255,150)
+Instance.new("UICorner", check)
+
+-- check key
+check.MouseButton1Click:Connect(function()
+    if isValidKey(box.Text) then
+        check.Text = "ĐÚNG!"
+        wait(1)
+        gui:Destroy()
+
+        -- 🚀 LOAD SCRIPT
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/huunghia7h1304-rgb/nghiatsbhubnokeypremium/refs/heads/main/NGHIADEPZAIVCL7HHUB"))()
+    else
+        check.Text = "SAI KEY!"
+        wait(1)
+        check.Text = "CHECK KEY"
+    end
+end)
